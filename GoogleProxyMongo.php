@@ -115,7 +115,7 @@ class GoogleProxyMongo {
 			try
 			{
 
-				$_mdb = new Mongo();
+				$_mdb = new Mongo('mongodb://heroku_3d9m4g8d:eb26lj3oqrt114shqne2ljpgfs@ds053978.mongolab.com:53978/heroku_3d9m4g8d');
 				self::$cached = $_mdb->selectDB("googleproxy")->cached;
 				self::$cached->ensureIndex(
 						array('key' => 1),
