@@ -1,0 +1,19 @@
+To compile php from source with support for shm stuff use this:
+sudo apt-get install php5-dev libmysqlclient15-dev bzip2 libcurl3 curl libpng12-dev libfreetype6-dev libmcrypt4 libmcrypt-dev libmhash2 libmhash-dev libxml2-dev libxslt1-dev apache2-prefork-dev libjpeg62-dev  libxft-dev libcurl4-gnutls-dev libmcrypt4 php5-dbg
+
+./configure --with-apxs2=/usr/bin/apxs2 --with-config-file-path=/etc/php5/apache2 --with-mysql --enable-inline-optimization --disable-debug --enable-bcmath --enable-calendar --enable-ctype --enable-dbase --enable-discard-path --enable-exif --enable-force-cgi-redirect --enable-ftp --enable-gd-native-ttf --with-ttf --enable-shmop --enable-sigchild --enable-sysvsem --enable-sysvshm --enable-sysvmsg --enable-wddx --with-zlib=yes --with-openssl --with-xsl --with-gd --with-freetype-dir=/usr/local/lib --with-jpeg-dir --with-png-dir --with-gettext --with-mhash --enable-sockets --enable-mbstring=all --enable-mbregex --enable-zend-multibyte --enable-exif --enable-soap --enable-pcntl --with-mysqli --with-mime-magic --with-iconv --with-pdo-mysql --with-curl
+
+also need to install APC
+http://constantshift.com/installing-apc-for-php-5-3/
+
+***** Mongo installation
+PHP:
+download mongo driver for php (mongo-1.1.4.tgz)
+unzip
+> phpize
+> ./configure --enable-mongo
+> make install
+edit php.ini, add: "extension = mongo.so" to the dynemic extentions section
+
+DB server: (use the sysV package!!! )
+http://www.mongodb.org/display/DOCS/Ubuntu+and+Debian+packages
