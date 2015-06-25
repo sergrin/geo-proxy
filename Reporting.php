@@ -21,7 +21,7 @@ class Reporting {
 		$connected = false;
 		while(!$connected){
 			try{
-				$_mdb = new Mongo();
+				$_mdb = new MongoClient('mongodb://heroku_3d9m4g8d:eb26lj3oqrt114shqne2ljpgfs@ds053978.mongolab.com:53978/heroku_3d9m4g8d');
 				$connected = true;
 			}
 			catch(MongoConnectionException $e){
