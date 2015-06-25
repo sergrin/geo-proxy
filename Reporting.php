@@ -30,7 +30,7 @@ class Reporting {
 			}
 		}
 		
-		$_reports = $_mdb->selectDB("googleproxy")->reports;
+		$_reports = $_mdb->selectDB("heroku_3d9m4g8d")->reports;
 
 		$_rowFilter = array('host' => $_host, 'date' => $_today);
 		

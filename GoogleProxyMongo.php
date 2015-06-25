@@ -116,7 +116,7 @@ class GoogleProxyMongo {
 			{
 
 				$_mdb = new MongoClient('mongodb://heroku_3d9m4g8d:eb26lj3oqrt114shqne2ljpgfs@ds053978.mongolab.com:53978/heroku_3d9m4g8d');
-				self::$cached = $_mdb->selectDB("googleproxy")->cached;
+				self::$cached = $_mdb->selectDB("heroku_3d9m4g8d")->cached;
 				self::$cached->ensureIndex(
 						array('key' => 1),
 						array('unique' => true, 'background' => true)
