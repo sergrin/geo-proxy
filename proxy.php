@@ -13,7 +13,7 @@ include_once 'Reporting.php';
 Reporting::LogIncommingRequest($_googUrl);
 
 include_once 'Position.php';
-include_once 'RequestManager.php';
+//include_once 'RequestManager.php';
 include_once 'GoogleProxyMongo.php';
 
 
@@ -25,11 +25,11 @@ if ( $_cacheLookup ){
 	exit( $_cacheLookup );
 	
 } else {
-	$_req = new ReqestsManager();
+	//$_req = new ReqestsManager();
 	$_pos = new Position();
 	//$_req->getPositionInLine($_pos);
-	zzzWhileObjectFunctionFalse($_req, 'getPositionInLine',$_pos);
-	zzzWhileObjectFunctionFalse($_req, "okToSendRequest", $_pos);
+	//zzzWhileObjectFunctionFalse($_req, 'getPositionInLine',$_pos);
+	//zzzWhileObjectFunctionFalse($_req, "okToSendRequest", $_pos);
 
 	$_googleResponse = file_get_contents($_googUrl,0,null,null);
 	GoogleProxyMongo::storeUrl($_googUrl, $_googleResponse);
