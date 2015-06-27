@@ -16,7 +16,6 @@ include_once 'Position.php';
 //include_once 'RequestManager.php';
 include_once 'GoogleProxyMongo.php';
 
-
 $_cacheLookup = GoogleProxyMongo::findUrl($_googUrl);
 
 if ( $_cacheLookup ){
