@@ -115,8 +115,8 @@ class GoogleProxyMongo {
 			try
 			{
 
-				$_mdb = new MongoClient('mongodb://heroku_3d9m4g8d:eb26lj3oqrt114shqne2ljpgfs@ds053978.mongolab.com:53978/heroku_3d9m4g8d');
-				self::$cached = $_mdb->selectDB("heroku_3d9m4g8d")->cached;
+				$_mdb = new MongoClient('mongodb://heroku:xIklhEn9rZ3qtVglutELuDdNZm4fSZgv-1T_G46FrSvuYIxTbTW4y8uePGq567AITTx0cxTjpknb2Et3Ts59Kw@lamppost.18.mongolayer.com:10228,lamppost.19.mongolayer.com:10205/app38066177');
+				self::$cached = $_mdb->selectDB("app38066177")->cached;
 				self::$cached->ensureIndex(
 						array('key' => 1),
 						array('unique' => true, 'background' => true)

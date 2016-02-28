@@ -21,7 +21,7 @@ class Reporting {
 		$connected = false;
 		while(!$connected){
 			try{
-				$_mdb = new MongoClient('mongodb://heroku_3d9m4g8d:eb26lj3oqrt114shqne2ljpgfs@ds053978.mongolab.com:53978/heroku_3d9m4g8d');
+				$_mdb = new MongoClient('mongodb://heroku:xIklhEn9rZ3qtVglutELuDdNZm4fSZgv-1T_G46FrSvuYIxTbTW4y8uePGq567AITTx0cxTjpknb2Et3Ts59Kw@lamppost.18.mongolayer.com:10228,lamppost.19.mongolayer.com:10205/app38066177');
 				$connected = true;
 			}
 			catch(MongoConnectionException $e){
@@ -30,7 +30,7 @@ class Reporting {
 			}
 		}
 		
-		$_reports = $_mdb->selectDB("heroku_3d9m4g8d")->reports;
+		$_reports = $_mdb->selectDB("app38066177")->reports;
 
 		$_rowFilter = array('host' => $_host, 'date' => $_today);
 		
